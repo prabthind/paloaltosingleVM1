@@ -5,15 +5,19 @@
     "location": {
       "type": "string"
     },
-    "storageAccountExistingRG" : {
-      "type" : "string",
-      "defaultValue" : ""
+    "storageAccountExistingRG": {
+      "type": "string",
+      "defaultValue": ""
+    },
+    "storageAccountExistingName": {
+      "type": "string",
+      "defaultValue": ""
     }
   },
   "resources": [],
   "outputs": {
     "storageAccountId": {
-      "value": "[resourceId(parameters('storageAccountExistingRG'),'Microsoft.Storage/StorageAccounts',parameters('storageAccountExistingRG'))]",
+      "value": "[resourceId(parameters('storageAccountExistingRG'),'Microsoft.Storage/StorageAccounts',parameters('storageAccountExistingName'))]",
       "type": "string"
     }
   }
